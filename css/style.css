@@ -1,4 +1,32 @@
+* {
+    font-family: monospace;
+}
+
+html {
+    font-size: 18px;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
 p {
-    font-size: 32px;
     color: blueviolet;
+}
+
+h1, h3 {
+    color: brown;
+}
+
+.different {
+    text-transform: uppercase;
+    background-color: coral;
+}
+
+.gray {
+    color: gray;
+}
+
+#second {
+    font-style: italic;
 }
