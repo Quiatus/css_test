@@ -45,9 +45,14 @@ a, a:visited {
     text-decoration: none;
 }
 
-a:hover {
-    color: white;
+a:hover, a:focus {
+    color: #666;
 }
+
+a:active {
+    color: #EEE;
+}
+
 
 .different {
     text-transform: uppercase;
