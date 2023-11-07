@@ -144,3 +144,30 @@ a:active {
     text-indent: 2em;
     line-height: 1.4;
 }
+
+#cssLists {
+    background-color: #DDD;
+}
+
+#cssLists ul, #cssLists ol {
+    margin-left: 2rem;
+}
+
+#cssLists ol {
+    list-style-type: lower-alpha;
+}
+
+#cssLists ul {
+    text-align: center;
+    list-style-position: inside;
+    /* list-style: square url(../checkmark.png) inside; */
+}
+
+#cssLists li:nth-child(1) {
+    color: #a52a2a;
+}
+
+ul ::marker {
+    color: red;
+    content: ">>> ";
+}
