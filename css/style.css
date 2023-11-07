@@ -167,7 +167,55 @@ a:active {
     color: #a52a2a;
 }
 
-ul ::marker {
+#cssLists ul ::marker {
     color: red;
     content: ">>> ";
+}
+
+#resMenu {
+    background-color: #BBB;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+#resMenu nav {
+    border: 2px solid #999;
+    background-color: #DDD;
+    border-radius: 2rem;
+    max-width: 600px;
+    margin: 0 auto 1rem;
+    font-size: 3rem;
+    line-height: 7rem;
+}
+
+#resMenu h2 {
+    background-color: goldenrod;
+    padding: 1rem;
+    border-radius: 2rem 2rem 0 0;
+    margin: 0;
+}
+
+#resMenu li {
+    list-style-type: none;
+    display: block;
+    border: none;
+    border-top: 2px solid #999;
+    padding: 0;
+}
+
+#resMenu li a {
+    display: block;
+}
+
+#resMenu a, #resMenu a:visited {
+    color: #333;
+}
+
+#resMenu a:hover {
+    background-color: #999;
+    color: #DDD;
+}
+
+#resMenu li:last-child a:hover {
+    border-radius: 0 0 2rem 2rem;
 }
