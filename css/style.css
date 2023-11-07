@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* CSS reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -25,8 +29,24 @@ main {
     margin: auto;
 }
 
-p {
-    margin-bottom: 1rem;
+nav li {
+    display: inline-block;
+    color: #222;
+    padding: 0 2rem;
+    border-right: 2px solid #222;
+}
+
+nav li:last-of-type {
+    border-right: none;
+}
+
+a, a:visited {
+    color: #222;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
 }
 
 .different {
@@ -37,11 +57,25 @@ p {
 .chapterSection{
     padding: 2rem;
     border-radius: 1rem;
-    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
-.chapterSection:first-of-type {
-    margin-top: 0;
+.circle {
+    background-color: goldenrod;
+    width: 100px;
+    height: 100px;
+    margin: 3rem auto;
+    border: 2px solid black;
+    outline: 2px solid brown;
+    border-radius: 50px;
+    outline-offset: 0.25em;
+
+}
+
+#navigation {
+    background-color: #84c3c5;
+    font-size: 1.25rem;
+    padding: 1em;
 }
 
 #second {
@@ -54,11 +88,12 @@ p {
 
 #cssColors p {
     color: gray;
-}
+} 
 
 #cssColors .blueviolet {
     color:blueviolet;
 }
+
 
 #cssUnits {
     background-color: lightgoldenrodyellow;
@@ -72,5 +107,35 @@ p {
 }
 
 #cssUnits #charWrap {
-    width: 40ch;
+    min-width: 20ch;
+    max-width: 40ch;
+}
+
+#cssBoxModel {
+    background-color:honeydew;
+}
+
+#cssBoxModel h2, #cssBoxModel p {
+    border: 5px dotted darkred;
+    font-size: 1.5rem;
+    padding: 1.5em;
+    margin: 1.5em;
+    outline: 2px solid purple;
+    outline-offset: 5px;
+}
+
+#cssTypography {
+    background-color: rgb(255, 200, 150);
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+    padding: 10%;
+}
+
+/* input, button {
+    font: inherit;
+} */
+
+#cssTypography p {
+    text-indent: 2em;
+    line-height: 1.4;
 }

@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -13,16 +16,27 @@
     </header>
 
     <main>
+        <nav class="chapterSection" id="navigation">
+            <ul>
+                <li><a href="#cssColors">Colors</a></li>
+                <li><a href="#cssUnits">Units</a></li>
+                <li><a href="#cssBoxModel">Box Model</a></li>
+                <li><a href="#cssTypography">Typography</a></li>
+            </ul>
+        </nav>
+
         <section class="chapterSection" id="cssColors">
             <article>
                 <h2>CSS Colors</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea saepe culpa maxime quos id numquam perspiciatis eveniet ipsum dicta provident dolorem, incidunt, nisi aliquam ullam modi architecto veritatis! Sit, molestias?</p>
             </article>
 
+            <br>
+
             <article>
                 <h3>Title</h3>
-                <p class="blueviolet" id="second">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea <span class="different">saepe culpa maxime</span> quos id numquam perspiciatis eveniet ipsum dicta provident dolorem, incidunt, nisi aliquam ullam modi architecto veritatis! Sit, molestias?</p>
-
+                <p class="blueviolet" id="second">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea <span class="different">saepe culpa maxime</span> quos id numquam perspiciatis eveniet ipsum dicta provident dolorem, incidunt, nisi aliquam ullam ERR-RORR modi architecto veritatis! Sit, molestias?</p>
+                <br>
                 <p class="blueviolet">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea <span class="different">saepe</span> culpa maxime quos id numquam perspiciatis eveniet ipsum dicta provident dolorem, incidunt, nisi aliquam ullam modi architecto veritatis! Sit, molestias?</p>
             </article>
         </section>
@@ -32,7 +46,29 @@
 
             <p>Resized text with the width of 50%</p>
 
+            <br>
+
             <p id="charWrap">Another paragraph with the width set to 40 characters. It should wrap if the text has more than 40 characters.</p>
+        </section>
+
+        <section class="chapterSection" id="cssBoxModel">
+            <h2>CSS Box Model</h2>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati deserunt vero ea veritatis possimus doloremque eveniet nemo labore! Exercitationem facere, debitis laudantium eos itaque ullam iste nobis facilis officiis adipisci! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum sed, at unde inventore odio dolorem minima alias quae blanditiis quod nulla natus deleniti laudantium tempore, illum, amet distinctio expedita velit.</p>
+
+            <div class="circle"></div>
+        </section>
+
+        <section class="chapterSection" id="cssTypography">
+            <h2>CSS Typography</h2>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati deserunt vero ea veritatis possimus doloremque eveniet nemo labore! Exercitationem facere, debitis laudantium eos itaque ullam iste nobis facilis officiis adipisci! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum sed, at unde inventore odio dolorem minima alias quae blanditiis quod nulla natus deleniti laudantium tempore, illum, amet distinctio expedita velit.</p>
+<!-- 
+            <form>
+                <label for="name">Name: </label>
+                <input type="text" id="name" placeholder="Name">
+                <button>Submit</button>
+            </form> -->
         </section>
     </main>
 </body>
