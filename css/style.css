@@ -65,7 +65,7 @@ a:active {
 
 .chapterSection{
     padding: 2rem;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     margin-bottom: 2rem;
     background-color:#ffdab9;
 }
@@ -83,7 +83,7 @@ a:active {
 
 #navigation {
     background-color: #84c3c5;
-    font-size: 1.25rem;
+    font-size: 1rem;
     padding: 1em;
 }
 
@@ -270,7 +270,6 @@ a:active {
 }
 
 .columns p {
-    margin-top: 0;
     margin-bottom: 1rem;
     text-indent: 1rem;
 }
@@ -285,4 +284,55 @@ a:active {
 
 .columns .nowrap {
     white-space: nowrap;
+}
+
+#cssPositioning {
+    min-height: 200vw;
+}
+
+.outer-container {
+    border: 3px dashed black;
+    width: 80vw;
+    height: 80vw;
+    margin: auto;
+    position: relative;
+}
+
+.inner-container {
+    border: 2px solid #84c3c5;
+    width: 40vw;
+    height: 50vw;
+    margin: 150px auto;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    padding: 1rem;
+}
+
+.absolute {
+    background-color: #CCC;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.relative {
+    background-color: aliceblue;
+    position: relative;
+    top: 300px;
+    left: 100px;
+}
+
+.fixed {
+    background-color: lightgreen;
+    position: fixed;
+    top: 100px;
+}
+
+.sticky {
+    background-color: cornflowerblue;
+    position: sticky;
+    top: 0;
 }
