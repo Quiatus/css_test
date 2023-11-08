@@ -9,19 +9,20 @@
 }
 
 body {
-    background-color: #faebd7;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: #332d24;
+    font-family: 'Roboto', sans-serif;
 }
 
-h1, h2, h3 {
+h2, h3 {
     color: #a52a2a;
     margin-bottom: 1rem;
 }
 
 header h1 {
+    color: #ffdab9;
     text-align: center;
-    font-size: 3rem;
-    margin: 2rem;
+    font-size: 4rem;
+    margin: 1rem;
 }
 
 main {
@@ -29,30 +30,33 @@ main {
     margin: auto;
 }
 
-nav li {
+#navigation li {
     display: inline-block;
     color: #222;
-    padding: 0 2rem;
+    padding: 0 1rem;
     border-right: 2px solid #222;
 }
 
-nav li:last-of-type {
+#navigation li:first-of-type {
+    padding-left: 0;
+}
+
+#navigation li:last-of-type {
     border-right: none;
 }
 
 a, a:visited {
-    color: #222;
+    color: #332d24;
     text-decoration: none;
 }
 
 a:hover, a:focus {
-    color: #666;
+    color: brown;
 }
 
 a:active {
-    color: #EEE;
+    color: #ffdab9;
 }
-
 
 .different {
     text-transform: uppercase;
@@ -63,6 +67,7 @@ a:active {
     padding: 2rem;
     border-radius: 1rem;
     margin-bottom: 2rem;
+    background-color:#ffdab9;
 }
 
 .circle {
@@ -74,7 +79,6 @@ a:active {
     outline: 2px solid brown;
     border-radius: 50px;
     outline-offset: 0.25em;
-
 }
 
 #navigation {
@@ -87,21 +91,12 @@ a:active {
     font-style: italic;
 }
 
-#cssColors {
-    background-color:#ffdab9;
-}
-
 #cssColors p {
     color: gray;
 } 
 
 #cssColors .blueviolet {
     color:blueviolet;
-}
-
-
-#cssUnits {
-    background-color: lightgoldenrodyellow;
 }
 
 #cssUnits p {
@@ -116,10 +111,6 @@ a:active {
     max-width: 40ch;
 }
 
-#cssBoxModel {
-    background-color:honeydew;
-}
-
 #cssBoxModel h2, #cssBoxModel p {
     border: 5px dotted darkred;
     font-size: 1.5rem;
@@ -130,9 +121,7 @@ a:active {
 }
 
 #cssTypography {
-    background-color: rgb(255, 200, 150);
     font-size: 2rem;
-    font-family: 'Roboto', sans-serif;
     padding: 10%;
 }
 
@@ -143,10 +132,6 @@ a:active {
 #cssTypography p {
     text-indent: 2em;
     line-height: 1.4;
-}
-
-#cssLists {
-    background-color: #DDD;
 }
 
 #cssLists ul, #cssLists ol {
@@ -173,8 +158,6 @@ a:active {
 }
 
 #resMenu {
-    background-color: #BBB;
-    font-family: 'Roboto', sans-serif;
     text-align: center;
 }
 
@@ -201,6 +184,7 @@ a:active {
     border: none;
     border-top: 2px solid #999;
     padding: 0;
+    font-size: 3rem;
 }
 
 #resMenu li a {
@@ -218,4 +202,17 @@ a:active {
 
 #resMenu li:last-child a:hover {
     border-radius: 0 0 2rem 2rem;
+}
+
+#cssDisplay p {
+    background-color: lightgrey;
+    font-size: 1.5rem;
+}
+
+#cssDisplay span {
+    background-color: gray;
+    display: inline-block;
+    margin-top: 50px;
+    height: 150px;
+    padding: 4rem;
 }
