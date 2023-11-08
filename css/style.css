@@ -216,3 +216,41 @@ a:active {
     height: 150px;
     padding: 4rem;
 }
+
+#cssFloat p {
+    margin-bottom: 1rem;
+}
+
+#cssFloat {
+    display: flow-root;
+}
+
+.block {
+    width: 15vw;
+    height: 15vw;
+    background-color: #222;
+    color: wheat;
+    padding: 1rem;
+}
+
+.left {
+    float: left;
+    margin-right: 1rem;
+}
+
+.right {
+    float: right;
+    margin-left: 1rem;
+}
+
+#cssFloat section {
+    background-color: #84c3c5;
+    border: 1px solid black;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: flow-root; /* Contains the flow */
+}
+
+#cssFloat section p {
+    margin-bottom: 0;
+}
