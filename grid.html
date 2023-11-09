@@ -18,6 +18,46 @@
             font-family: 'Roboto', sans-serif;
             min-height: 100vh;
             background-color: #888;
+
+            display: grid;
+            grid-template-columns: repeat(9, 1fr);
+            grid-auto-rows: 75px auto 75px;
+            grid-template-areas: 
+                "hd hd hd hd hd hd hd hd hd"
+                "mn mn mn mn mn mn mn sb sb"
+                "ft ft ft ft ft ft ft ft ft";
+
+            gap: 1rem;
+        }
+
+        .el {
+            background-color: rebeccapurple;
+            color: #FFF;
+            display: grid;
+            place-content: center;
+        }
+
+        .header {
+            grid-area: hd;
+        }
+
+        .sidebar {
+            grid-area: sb;
+            background-color: blue;
+        }
+
+        .footer {
+            grid-area: ft;
+        }
+
+        .container {
+            grid-area: mn;
+            min-height: 400px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr 2fr); 
+            grid-auto-rows: minmax(150px, auto );
+            row-gap: 1rem;
+            column-gap: 1rem;
         }
 
         .box {
@@ -27,13 +67,27 @@
             padding: 0.5rem;
         }
 
+        .box:first-child {
+            background-color: blue;
+            grid-column: 1 / 4;
+            grid-row: 1 / 3;
+
+            display: grid;
+            place-content:  center;/*This is a shorthand for justify-content and align-content  */
+
+        }
+
         .box:nth-child(2) {
-            flex: 2 2 250px;
-            order: -1;
+            background-color: purple;
+            grid-column: 1 / 5;
+            grid-row: 3 / 4; 
         }
     </style>
 </head>
 <body>
+    <header class="header el">
+        <h1>Header</h1>
+    </header>
     <main class="container">
         <div class="box">1</div>
         <div class="box">2</div>
@@ -41,7 +95,12 @@
         <div class="box">4</div>
         <div class="box">5</div>
         <div class="box">6</div>
-
     </main>
+    <aside class="sidebar el">
+        <h2>Sidebar</h2>
+    </aside>
+    <footer class="footer el">
+        <h2>Footer</h2>
+    </footer>
 </body>
 </html>
