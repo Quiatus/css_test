@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile cards</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+        /*  CSS reset */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Utility classes */
+
+        .nowrap {
+            white-space: nowrap;
+        }
+
+        /* General style */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font: 1.5rem 'Nunito', sans-serif;
+            min-height: 100vh;
+            background-color: #475569;
+            background-image: radial-gradient(whitesmoke, #475569);
+            display: flex;
+            flex-direction: column;
+        }
+
+        header, footer {
+            position: sticky;
+            color: whitesmoke;
+            background-color: #1E293B;
+            text-align: center;
+        }
+
+        header {
+            top: 0;
+        }
+
+        nav {
+            background-color: #FFF;
+            padding: 0.5rem;
+            border-bottom: 2px solid #000;
+            font-weight: bolder;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        nav a, nav a:visited {
+            color: #000;
+        }
+
+        nav a:hover, nav a:focus {
+            color: hsla(0, 0%, 20%, 0.6);
+        }
+
+        main {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1rem;
+        }
+
+        footer {
+            bottom: 0;
+        }
+
+        .card {
+            scroll-margin-top: 8rem;
+            width: min(100%, 350px);
+            background-color: #cbd5e1;
+            border: 2px solid black;
+            border-radius: 15px;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card figure {
+            display: flex;
+            flex-flow: column nowrap;
+
+        }
+
+        .card img {
+            border: 5px solid #666;
+            border-radius: 50%;
+        }
+
+        .card figcaption {
+            font-weight: bolder;
+            font-size: 2rem;
+            margin: 1rem;
+            text-align: center;
+        }
+
+        @media screen and (min-width: 576px /* Start From */) {
+            main {
+                justify-content: center;
+                flex-flow: row wrap;
+                padding: 1rem;
+            }
+
+            .card {
+                width: min(100%, 400px);
+            }
+        }
+
+        @media screen and (min-width: 768px /* Start From */) {
+            nav {
+                display: none;
+            }
+
+            .card {
+                width: min(100%, 325px)
+            }
+
+            .card figure {
+                flex-flow: column-reverse;
+            }
+
+            .card p {
+                margin-top: 1rem;
+            }
+        }
+
+        @media screen and (min-width: 992px /* Start From */) {
+            .card {
+                width: min(100%, 400px);
+            }
+        }
+
+        @media screen and (min-width: 1201px /* Start From */) {
+            .card {
+                width: min(calc(33% - 1rem), 500px);
+            }
+        }
+
+        @media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            nav {
+                display: none;
+            }
+
+            main {
+                flex-flow: row nowrap;
+                justify-content: space-evenly;
+                align-items: stretch;
+            }
+
+            .card {
+                width: min(calc(33% - 0.5rem), 200px);
+            }
+
+            .card figcaption, .card p {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Our Staff</h1>
+        <nav>
+            <a href="#profile1">Joe</a>
+            <a href="#profile2">Matt</a>
+            <a href="#profile3">Jane</a>
+        </nav>
+    </header>
+
+    <main>
+        <article id="profile1" class="card">
+            <figure>
+                <img src="img/profile1-500x500.png" alt="Joe" width="500" height="500">
+                <figcaption>Joe Coder</figcaption>
+            </figure>
+            <p>
+                <q>I code stuff.</q>
+            </p>
+        </article>
+
+        <article id="profile2" class="card">
+            <figure>
+                <img src="img/profile2-500x500.png" alt="Matt" width="500" height="500">
+                <figcaption>Matt Designer</figcaption>
+            </figure>
+            <p>
+                <q>I design stuff.</q>
+            </p>
+        </article>
+
+        <article id="profile3" class="card">
+            <figure>
+                <img src="img/profile3-500x500.png" alt="Jane" width="500" height="500">
+                <figcaption>Jane <span class="nowrap">Dev Rel</span></figcaption>
+            </figure>
+            <p>
+                <q>I teach stuff.</q>
+            </p>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; Acme Co.</p>
+    </footer>
+</body>
+</html>
