@@ -63,11 +63,11 @@
             justify-content: space-evenly;
         }
 
-        nav a, nav a:visited {
+        nav a:any-link {
             color: #000;
         }
 
-        nav a:hover, nav a:focus {
+        nav :is(a:hover, a:focus) {
             color: hsla(0, 0%, 20%, 0.6);
         }
 
@@ -96,6 +96,18 @@
             align-items: center;
         }
 
+        .card img:not([alt='Matt']) {
+            border: 2px solid red;
+        }
+
+        .card:nth-child(2) {
+            background-color: papayawhip;
+        }
+
+        .card:target {
+            border: 2px solid whitesmoke;
+        }
+
         .card figure {
             display: flex;
             flex-flow: column nowrap;
@@ -103,7 +115,7 @@
         }
 
         .card img {
-            border: 5px solid #666;
+            border: 5px double #666;
             border-radius: 50%;
         }
 
@@ -112,6 +124,35 @@
             font-size: 2rem;
             margin: 1rem;
             text-align: center;
+        }
+
+        .card figcaption::first-letter {
+            font-size: 3rem;;
+        }
+
+        .card figcaption::after {
+            content: '---';
+            display: block;
+        }
+
+        .card p {
+            position: relative;
+        }
+
+        .card p::before {
+            content: open-quote;
+            font-size: 3em;
+            position: absolute;
+            top: -0.25em;
+            left: -0.5em;
+        }
+
+        .card p::after {
+            content: close-quote;
+            font-size: 3em;
+            position: absolute;
+            top: -0.25em;
+            right: -0.5em;
         }
 
         @media screen and (min-width: 576px /* Start From */) {
@@ -198,7 +239,7 @@
                 <figcaption>Joe Coder</figcaption>
             </figure>
             <p>
-                <q>I code stuff.</q>
+                I code stuff.
             </p>
         </article>
 
@@ -208,7 +249,7 @@
                 <figcaption>Matt Designer</figcaption>
             </figure>
             <p>
-                <q>I design stuff.</q>
+                I design stuff.
             </p>
         </article>
 
@@ -218,7 +259,7 @@
                 <figcaption>Jane <span class="nowrap">Dev Rel</span></figcaption>
             </figure>
             <p>
-                <q>I teach stuff.</q>
+                I teach stuff.
             </p>
         </article>
     </main>
