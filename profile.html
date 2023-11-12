@@ -22,10 +22,44 @@
             height: auto;
         }
 
+        /* Variables */
+
+        :root {
+            /* Color */
+
+            --BGCOLOR: #475569;
+            --RADIAL-COLOR: whitesmoke;
+            --LIGHT-COLOR: whitesmoke;
+            --DARK-COLOR: #000;
+
+            /* Font */
+            --FF: 'Nunito', sans-serif;
+            --FS: 1.5rem;
+            --FS-XL: 3rem;
+
+            /* General */
+
+            --SHADOWS: 0 6px 5px -5px var(--DARK-COLOR);
+
+            /* Square */
+
+            --SQUARE-BGCOLOR: papayawhip;
+            --SQUARE-SIZE: max(150px, 20vw);
+
+        }
+
         /* Utility classes */
 
         .nowrap {
             white-space: nowrap;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --BGCOLOR: #000;
+                --RADIAL-COLOR: #CCC;
+                --SQUARE-BGCOLOR: rgb(200,170,200);
+            }
         }
 
         /* General style */
@@ -35,17 +69,17 @@
         }
 
         body {
-            font: 1.5rem 'Nunito', sans-serif;
+            font: var(--FS) var(--FF);
             min-height: 100vh;
-            background-color: #475569;
-            background-image: radial-gradient(whitesmoke, #475569);
+            background-color: var(--BGCOLOR);
+            background-image: radial-gradient(var(--RADIAL-COLOR), var(--BGCOLOR));
             display: flex;
             flex-direction: column;
         }
 
         header, footer {
             position: sticky;
-            color: whitesmoke;
+            color: var(--LIGHT-COLOR);
             background-color: #1E293B;
             text-align: center;
         }
@@ -55,16 +89,17 @@
         }
 
         nav {
-            background-color: #FFF;
+            background-color: var(--LIGHT-COLOR);
             padding: 0.5rem;
-            border-bottom: 2px solid #000;
+            border-bottom: 2px solid var(--DARK-COLOR);
             font-weight: bolder;
             display: flex;
             justify-content: space-evenly;
+            box-shadow: var(--SHADOWS);
         }
 
         nav a:any-link {
-            color: #000;
+            color: var(--DARK-COLOR);
         }
 
         nav :is(a:hover, a:focus) {
@@ -88,7 +123,7 @@
             scroll-margin-top: 8rem;
             width: min(100%, 350px);
             background-color: #cbd5e1;
-            border: 2px solid black;
+            border: 2px solid var(--DARK-COLOR);
             border-radius: 15px;
             padding: 1rem;
             display: flex;
@@ -101,11 +136,11 @@
         }
 
         .card:nth-child(2) {
-            background-color: papayawhip;
+            background-color: var(--LIGHT-COLOR);
         }
 
         .card:target {
-            border: 2px solid whitesmoke;
+            border: 2px solid var(--LIGHT-COLOR);
         }
 
         .card figure {
@@ -141,7 +176,7 @@
 
         .card p::before {
             content: open-quote;
-            font-size: 3em;
+            font-size: var(--FS-XL);
             position: absolute;
             top: -0.25em;
             left: -0.5em;
@@ -149,7 +184,7 @@
 
         .card p::after {
             content: close-quote;
-            font-size: 3em;
+            font-size: var(--FS-XL);
             position: absolute;
             top: -0.25em;
             right: -0.5em;
@@ -220,6 +255,32 @@
                 font-size: 1.25rem;
             }
         }
+
+        .laptop {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            align-content: center;
+            gap: min(4vw, 15px);
+            padding: 1rem 0;
+        }
+
+        .square--highlight {
+            --SQUARE-BGCOLOR: cornflowerblue;
+        }
+
+
+        .square {
+            background-color: var(--SQUARE-BGCOLOR);
+            width: var(--SQUARE-SIZE);
+            height: var(--SQUARE-SIZE);
+            border: 2px solid black;
+            border-radius: 15px;
+            display: grid;
+            place-content: center;
+            font-size: var(--FS-XL);
+            box-shadow: var(--SHADOWS);
+        }
     </style>
 </head>
 <body>
@@ -263,6 +324,21 @@
             </p>
         </article>
     </main>
+
+    <section class="laptop">
+        <div class="square">💻</div>
+        <div class="square">💻</div>
+        <div class="square">💻</div>
+        <div class="square">💻</div>
+        <div class="square">💻</div>
+        <div class="square">💻</div>
+        <div class="square square--highlight">💻</div>
+        <div class="square">💻</div>
+        <div class="square">💻</div>
+        <div class="square">💻</div>
+        <div class="square">💻</div>
+        <div class="square">💻</div>
+    </section>
 
     <footer>
         <p>&copy; Acme Co.</p>
